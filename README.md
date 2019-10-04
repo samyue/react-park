@@ -1,6 +1,6 @@
-# react-todo-list
+# react-park
 
-Todo List sample project with React, Typescript, SCSS, Redux, Redux-Observable, etc.
+Sample project using React, Typescript, SCSS, Redux, Redux-Observable, etc.
 
 ## Available Scripts
 
