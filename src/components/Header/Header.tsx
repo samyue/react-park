@@ -6,7 +6,7 @@ const Header: React.FC = () => {
   return (
     <header className='Header'>
       <Navbar expand='md'>
-        <NavbarBrand href='/'>React Todo List</NavbarBrand>
+        <NavbarBrand href='/'>React Park</NavbarBrand>
       </Navbar>
     </header>
   )
