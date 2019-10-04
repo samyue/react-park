@@ -1,26 +1,18 @@
-import React from "react";
-import "./App.scss";
-import logo from "./logo.svg";
+import Header from 'components/Header/Header'
+import Main from 'components/Main/Main'
+import TodoList from 'features/TodoList/TodoList'
+import React from 'react'
+import './App.scss'
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <Header />
+      <Main>
+        <TodoList />
+      </Main>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
