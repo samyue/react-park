@@ -1,0 +1,30 @@
+{
+  "eslintConfig": {
+    "extends": ["react-app", "airbnb", "prettier", "prettier/@typescript-eslint", "prettier/react"],
+    "rules": {
+      "additional-rule": "warn"
+    },
+    "overrides": [
+      {
+        "files": ["**/*.ts?(x)"],
+        "rules": {
+          "@typescript-eslint/no-for-in-array": "error",
+          "@typescript-eslint/interface-name-prefix": "error",
+          "@typescript-eslint/class-name-casing": "error",
+          "@typescript-eslint/no-this-alias": [
+            "error",
+            {
+              "allowDestructuring": true
+            }
+          ]
+        }
+      },
+      {
+        "files": ["**/*spec.ts?(x)"],
+        "rules": {
+          "no-unused-expressions": "off"
+        }
+      }
+    ]
+  }
+}

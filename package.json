@@ -2,6 +2,14 @@
   "name": "react-park",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "eslint": "eslint \"src/**/*.{ts,tsx}\"",
+    "stylelint": "stylelint src/**/*.scss --syntax scss"
+  },
   "dependencies": {
     "@types/jest": "24.0.18",
     "@types/node": "12.7.11",
@@ -16,12 +24,14 @@
     "reactstrap": "8.0.1",
     "typescript": "3.6.3"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "stylelint": "stylelint src/**/*.scss --syntax scss"
+  "devDependencies": {
+    "eslint-config-airbnb": "18.0.1",
+    "husky": "3.0.8",
+    "lint-staged": "9.4.1",
+    "prettier": "1.18.2",
+    "prettier-stylelint": "0.4.2",
+    "stylelint": "11.0.0",
+    "stylelint-scss": "3.11.1"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,10 +48,19 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "prettier": "1.18.2",
-    "prettier-stylelint": "0.4.2",
-    "stylelint": "11.0.0",
-    "stylelint-scss": "3.11.1"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.scss": [
+      "stylelint --syntax scss --fix",
+      "git add"
+    ],
+    "src/**/*.{ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
