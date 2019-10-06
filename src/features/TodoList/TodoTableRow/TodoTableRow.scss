@@ -1,7 +1,20 @@
-.todo-table-row__actions {
+// Have to add selector weight to override bootstrap style
+.todo-table-row .todo-table-row__col {
+  vertical-align: middle;
+}
+
+.todo-table-row__col--description {
+  cursor: pointer;
+}
+
+.todo-table-row__col--actions {
   text-align: right;
 }
 
+.todo-table-row__circle {
+  cursor: pointer;
+}
+
 .todo-table-row__button {
-  margin-left: 0.5rem;
+  margin-left: 1rem;
 }
