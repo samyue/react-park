@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
-import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap'
-import './Header.scss'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
+import './Header.scss';
 
 const Header: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
   return (
     <header className='header'>
       <Navbar expand='sm' color='faded' light>
@@ -15,16 +16,20 @@ const Header: React.FC = () => {
         <Collapse isOpen={isOpen} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink href='/home'>Home</NavLink>
+              <NavLink tag={Link} to='/'>
+                Home
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href='/todo-list'>Todo List</NavLink>
+              <NavLink tag={Link} to='/todo-list'>
+                Todo List
+              </NavLink>
             </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
