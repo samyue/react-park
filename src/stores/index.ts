@@ -2,16 +2,20 @@ import { connectRouter, RouterAction, routerMiddleware, RouterState } from 'conn
 import { History } from 'history';
 import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import { createEpicMiddleware } from 'redux-observable';
+import { TodoListAction } from 'stores/todoList/actions';
+import { todoListReducer, TodoListState } from 'stores/todoList/reducer';
 
-export type RootAction = RouterAction;
+export type RootAction = RouterAction | TodoListAction;
 
 export interface RootState {
   router: RouterState;
+  todoList: TodoListState;
 }
 
 const rootReducer = (history: History) =>
   combineReducers<RootState>({
     router: connectRouter(history),
+    todoList: todoListReducer,
   });
 
 // const rootEpic = combineEpics(...todoListEpics);

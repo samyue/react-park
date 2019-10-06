@@ -1,3 +1,5 @@
+@import "src/styles/references";
+
 // Have to add selector weight to override bootstrap style
 .todo-table-row .todo-table-row__col {
   vertical-align: middle;
@@ -5,6 +7,11 @@
 
 .todo-table-row__col--description {
   cursor: pointer;
+}
+
+.todo-table-row__col--done {
+  color: $secondary;
+  text-decoration: line-through;
 }
 
 .todo-table-row__col--actions {

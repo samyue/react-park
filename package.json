@@ -20,6 +20,7 @@
     "@types/react-router": "5.1.1",
     "@types/react-router-dom": "5.1.0",
     "@types/reactstrap": "8.0.4",
+    "@types/uuid": "3.4.5",
     "bootstrap": "4.3.1",
     "connected-react-router": "6.5.2",
     "history": "4.10.1",
@@ -36,7 +37,8 @@
     "reselect": "4.0.0",
     "rxjs": "6.5.3",
     "typesafe-actions": "4.4.2",
-    "typescript": "3.6.3"
+    "typescript": "3.6.3",
+    "uuid": "3.3.3"
   },
   "devDependencies": {
     "eslint-config-airbnb": "18.0.1",
