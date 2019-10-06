@@ -1,6 +1,6 @@
 import { ReactComponent as CheckCircle } from 'assets/check-circle.svg';
 import { ReactComponent as Circle } from 'assets/circle.svg';
-import { colorSuccess, iconSizeMd } from 'models/styleConstants';
+import { colorSecondary, colorSuccess, iconSizeMd } from 'models/styleConstants';
 import React, { HTMLAttributes } from 'react';
 interface Props extends HTMLAttributes<HTMLElement> {
   isDone: boolean;
@@ -16,7 +16,7 @@ const TodoToggle = ({ isDone, toggleTodo, className }: Props) => {
       onClick={toggleTodo}
     />
   ) : (
-    <Circle className={className} width={iconSizeMd} fill={colorSuccess} onClick={toggleTodo} />
+    <Circle className={className} width={iconSizeMd} fill={colorSecondary} onClick={toggleTodo} />
   );
 };
 

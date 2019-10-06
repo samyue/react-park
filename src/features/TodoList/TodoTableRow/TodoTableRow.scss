@@ -10,8 +10,9 @@
 }
 
 .todo-table-row__col--done {
-  color: $secondary;
+  color: $gray-500;
   text-decoration: line-through;
+  transition: color 0.4s;
 }
 
 .todo-table-row__col--actions {
