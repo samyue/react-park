@@ -11,10 +11,10 @@
   text-align: right;
 }
 
-.todo-table-row__circle {
+.todo-table-row__action {
   cursor: pointer;
 }
 
-.todo-table-row__button {
+.todo-table-row__action--trash {
   margin-left: 1rem;
 }
