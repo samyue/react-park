@@ -7,7 +7,7 @@ export interface TodoListState {
   todoList: Todo[];
 }
 
-const initialState: TodoListState = {
+export const initialState: TodoListState = {
   todoList: [],
 };
 
