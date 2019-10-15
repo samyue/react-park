@@ -10,7 +10,7 @@ interface Props {
   addTodo: (description: string) => void;
 }
 
-const TodoCreation = ({ addTodo }: Props) => {
+const TodoCreation = (props: Props) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   return (
@@ -21,14 +21,16 @@ const TodoCreation = ({ addTodo }: Props) => {
           if (!inputRef.current || !inputRef.current.value.trim()) {
             return;
           }
-          addTodo(inputRef.current.value);
+          props.addTodo(inputRef.current.value);
           inputRef.current.value = '';
         }}
       >
         <InputGroup>
-          <Input placeholder='todo description ...' innerRef={inputRef} />
+          <Input placeholder='todo description ...' innerRef={inputRef} data-testid='todo-input' />
           <InputGroupAddon addonType='append'>
-            <Button color='primary'>Add</Button>
+            <Button color='primary' data-testid='add-button'>
+              Add
+            </Button>
           </InputGroupAddon>
         </InputGroup>
       </form>

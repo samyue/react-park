@@ -16,15 +16,17 @@ const TodoTable = ({ todoList }: Props) => {
     <Table className='todo-table' hover striped borderless>
       <TodoTableHeader />
       <tbody>
-        {todoList.map(item => {
-          return (
-            <TodoTableRow
-              id={item.id}
-              description={item.description}
-              isDone={item.isDone}
-            ></TodoTableRow>
-          );
-        })}
+        {todoList &&
+          todoList.map(item => {
+            return (
+              <TodoTableRow
+                id={item.id}
+                description={item.description}
+                isDone={item.isDone}
+                key={item.id}
+              ></TodoTableRow>
+            );
+          })}
       </tbody>
     </Table>
   );
