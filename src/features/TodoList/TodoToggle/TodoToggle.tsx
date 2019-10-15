@@ -14,9 +14,16 @@ const TodoToggle = ({ isDone, toggleTodo, className }: Props) => {
       width={iconSizeMd}
       fill={colorSuccess}
       onClick={toggleTodo}
+      data-testid='Checked'
     />
   ) : (
-    <Circle className={className} width={iconSizeMd} fill={colorSecondary} onClick={toggleTodo} />
+    <Circle
+      className={className}
+      width={iconSizeMd}
+      fill={colorSecondary}
+      onClick={toggleTodo}
+      data-testid='Unchecked'
+    />
   );
 };
 

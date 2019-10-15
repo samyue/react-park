@@ -1,6 +1,6 @@
 import { connectRouter, RouterAction, routerMiddleware, RouterState } from 'connected-react-router';
 import { History } from 'history';
-import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
+import { applyMiddleware, combineReducers, compose, createStore, Store } from 'redux';
 import { createEpicMiddleware } from 'redux-observable';
 import { TodoListAction } from 'stores/todoList/actions';
 import { todoListReducer, TodoListState } from 'stores/todoList/reducer';
@@ -28,7 +28,7 @@ const composeEnhancers =
 function configureStore(history: History) {
   const epicMiddleware = createEpicMiddleware<RootAction, RootAction, RootState>();
 
-  const store = createStore(
+  const store: Store<RootState, RootAction> = createStore(
     rootReducer(history),
     composeEnhancers(applyMiddleware(routerMiddleware(history), epicMiddleware)),
   );

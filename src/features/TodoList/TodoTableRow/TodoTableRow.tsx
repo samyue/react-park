@@ -19,7 +19,7 @@ const TodoTableRow = ({ id, description, isDone, toggleTodo, removeTodo }: Props
     toggleTodo(id);
   };
   return (
-    <tr className='todo-table-row'>
+    <tr className='todo-table-row' data-testid={`item-${id}`}>
       <td
         className={`todo-table-row__col todo-table-row__col--description ${
           isDone ? 'todo-table-row__col--done' : ''
