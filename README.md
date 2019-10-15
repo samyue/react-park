@@ -1,6 +1,6 @@
 # react-park
 
-Sample project using React, Typescript, SCSS, Redux, Redux-Observable, Reactstrap/Bootstrap, etc.
+Sample project using React, Typescript, SCSS, Redux, Redux-Observable, Reactstrap/Bootstrap, Jest and react-testing-library, etc.
 
 ## Available Scripts
 
