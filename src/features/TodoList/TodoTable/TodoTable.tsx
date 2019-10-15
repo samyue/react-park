@@ -15,7 +15,7 @@ const TodoTable = ({ todoList }: Props) => {
   return (
     <Table className='todo-table' hover striped borderless>
       <TodoTableHeader />
-      <tbody>
+      <tbody data-testid='todo-table-body'>
         {todoList &&
           todoList.map(item => {
             return (

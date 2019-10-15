@@ -42,6 +42,7 @@ const TodoTableRow = ({ id, description, isDone, toggleTodo, removeTodo }: Props
           onClick={() => {
             removeTodo(id);
           }}
+          data-testid='trash'
         />
       </td>
     </tr>
